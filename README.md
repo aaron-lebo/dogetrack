@@ -11,7 +11,7 @@ Additionally, if you edit the settings.json file in the dogetrack directory you 
 
 * USD value of your dogecoin
 
-If in addition to 'doge_owned' you set 'usd_invested' to the amount of USD you have spent on dogecoin, dogetrack will display:
+If in addition to 'doge_owned', you set 'usd_invested' to the amount of USD you have spent on dogecoin, dogetrack will display:
 
 * profit in USD
 
