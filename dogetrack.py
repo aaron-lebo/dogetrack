@@ -17,16 +17,16 @@ class Icon(QtGui.QSystemTrayIcon):
         menu = QtGui.QMenu()
         menu.addAction(self.time.strftime('%m/%d/%y %I:%M %p'))
         menu.addSeparator()
-        menu.addAction(self.btc_usd)
-        menu.addAction(self.doge_btc)
-        menu.addAction(str(self.doge_usd))
-        
+        menu.addAction('%s\tBTC/USD' % self.btc_usd)
+        menu.addAction('%s\tDOGE/BTC' % self.doge_btc)
+        menu.addAction('%s\tDOGE/USD' % self.doge_usd)
+
         if self.doge_owned and self.usd is not None:
-            menu.addAction('%.2f' % self.usd)
-            
+            menu.addAction('%.2f\tbalance' % self.usd)
+
         if self.usd_invested and self.profit is not None:
-            menu.addAction('%.2f' % self.profit)
-            
+            menu.addAction('%.2f\tprofit' % self.profit)
+
         menu.addSeparator()
         exit = menu.addAction('Exit')
         exit.triggered.connect(QtGui.qApp.quit)
