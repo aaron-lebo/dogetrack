@@ -1,7 +1,7 @@
 dogetrack
 =========
 
-dogetrack is a Bitcoin and Dogecoin price tracker that lives in your system tray. When you click on the icon in the system tray, it gives the following prices:
+dogetrack is a Bitcoin and Dogecoin price tracker that lives in your system tray. When you click on the icon, it gives the following prices:
 
 * BTC/USD (Coinbase)
 * DOGE/BTC (Cryptsy)
