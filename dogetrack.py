@@ -20,10 +20,13 @@ class Icon(QtGui.QSystemTrayIcon):
         menu.addAction(self.btc_usd)
         menu.addAction(self.doge_btc)
         menu.addAction(str(self.doge_usd))
+        
         if self.doge_owned and self.usd is not None:
             menu.addAction('%.2f' % self.usd)
+            
         if self.usd_invested and self.profit is not None:
             menu.addAction('%.2f' % self.profit)
+            
         menu.addSeparator()
         exit = menu.addAction('Exit')
         exit.triggered.connect(QtGui.qApp.quit)
@@ -70,7 +73,7 @@ class Icon(QtGui.QSystemTrayIcon):
             self.profit = None
 
 if __name__ == '__main__':
-  app = QtGui.QApplication([])
-  icon = Icon()
-  icon.show()
-  app.exec_()
+    app = QtGui.QApplication([])
+    icon = Icon()
+    icon.show()
+    app.exec_()
